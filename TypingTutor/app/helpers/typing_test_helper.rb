@@ -1,0 +1,2 @@
+module TypingTestHelper
+end

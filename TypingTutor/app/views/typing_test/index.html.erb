@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Typing Tutor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+    .typing-test-container {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    .paragraph {
+      font-size: 18px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      white-space: pre-wrap; /* Preserve line breaks */
+    }
+    .input-area {
+      margin-bottom: 20px;
+    }
+    #typing-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: none;
+    }
+    .results {
+      margin-top: 20px;
+    }
+    .results p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <script>
+    let startTime;
+    
+    function startTypingTest() {
+      startTime = new Date();
+    }
+    
+    function endTypingTest() {
+      const endTime = new Date();
+      const elapsedTime = (endTime - startTime) / 1000; // seconds
+      const typedText = document.getElementById("typing-input").value;
+      const originalText = document.getElementById("original-text").innerText.trim();
+      
+      const wordsPerMinute = calculateWPM(elapsedTime, typedText);
+      const accuracy = calculateAccuracy(typedText, originalText);
+      
+      document.getElementById("wpm").innerText = `WPM: ${wordsPerMinute.toFixed(2)}`;
+      document.getElementById("accuracy").innerText = `Accuracy: ${accuracy.toFixed(2)}%`;
+    }
+    
+    function calculateWPM(elapsedTime, typedText) {
+      const words = typedText.trim().split(/\s+/).length;
+      return (words / (elapsedTime / 60));
+    }
+    
+    function calculateAccuracy(typedText, originalText) {
+      const typedChars = typedText.replace(/\s+/g, '');
+      const originalChars = originalText.replace(/\s+/g, '');
+      
+      let correctChars = 0;
+      for (let i = 0; i < Math.min(typedChars.length, originalChars.length); i++) {
+        if (typedChars[i] === originalChars[i]) {
+          correctChars++;
+        }
+      }
+      
+      return (correctChars / originalChars.length) * 100;
+    }
+  </script>
+</head>
+<body>
+  <div class="typing-test-container">
+    <h1>Typing Tutor</h1>
+    <div class="paragraph" id="original-text"><%= @paragraph %></div>
+    <div class="input-area">
+      <textarea id="typing-input" onfocus="startTypingTest()" rows="6" placeholder="Start typing here..." autofocus></textarea>
+    </div>
+    <button onclick="endTypingTest()">Submit</button>
+    <div class="results">
+      <p id="wpm">WPM: </p>
+      <p id="accuracy">Accuracy: </p>
+    </div>
+  </div>
+</body>
+</html>
