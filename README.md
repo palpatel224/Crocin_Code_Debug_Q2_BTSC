@@ -62,17 +62,17 @@ Follow these steps to set up the project locally:
 
 6. Navigate to the cloned repository directory.
 
-7. **Install Bundler and Dependencies**
+7. **Install Bundler and Dependencies**:
    Install Bundler if it is not already installed:
       ```bash
       gem install bundler
    
-   Install the required gems using Bundler:
+8. Install the required gems using Bundler:
       ```bash
       bundle install
    
    Ensure you are using the right ruby version.
-8. **Run the Rails Server**
+9. **Run the Rails Server**
    Start the Rails server by running:
       ```bash
       rails s
