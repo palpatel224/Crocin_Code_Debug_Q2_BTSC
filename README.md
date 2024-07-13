@@ -8,6 +8,7 @@
 - [Important](#important)
 
 
+
 ## Installation
 
 ### Using Github CodeSpaces(preferred) :
@@ -71,8 +72,6 @@ Follow these steps to set up the project locally:
    rails s
 9. **Open the Web App**
     Open your web browser and navigate to http://localhost:3000/ to view the website.
-
-
 
 ## Features
 * Typing speed calculator app.
