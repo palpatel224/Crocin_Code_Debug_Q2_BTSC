@@ -26,11 +26,14 @@
    Run the following command to install the required gems using Bundler:
    ```bash
    bundle install
+   
 7. Ensure you are using the right ruby version.
+   
 8. Run the Server
    Start the Rails server by running:
    ```bash
    rails s
+   
 9. Open the Web App
    The Rails server typically runs on port 3000.
    In the Codespace, click on the "Ports" tab to find the forwarded port (usually port 3000).
