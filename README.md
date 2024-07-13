@@ -21,6 +21,7 @@
    Run the following command to install Rails:
    ```bash
    gem install rails
+   
 6. Install Dependencies
    Run the following command to install the required gems using Bundler:
    ```bash
