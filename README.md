@@ -80,7 +80,7 @@ Follow these steps to set up the project locally:
 * Each time a paragraph is fetched randomly.
 
 ## Bugs
-* The paragraph is not being retrieved properly.
+* The paragraphs are not being retrieved properly.
 
 ## References 
 * https://guides.rubyonrails.org/
