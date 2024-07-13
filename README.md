@@ -71,7 +71,7 @@ Follow these steps to set up the project locally:
       ```bash
       bundle install
    
-   Ensure you are using the right ruby version.
+Ensure you are using the right ruby version.
 9. **Run the Rails Server**
    Start the Rails server by running:
       ```bash
