@@ -76,7 +76,7 @@ Follow these steps to set up the project locally:
       
       ```bash
       rails s
-11. **Open the Web App**
+11. **Open the Web App**: 
     Open your web browser and navigate to http://localhost:3000/ to view the website.
 
 ## Features
