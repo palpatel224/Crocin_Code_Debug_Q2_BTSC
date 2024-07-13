@@ -71,12 +71,12 @@ Follow these steps to set up the project locally:
       ```bash
       bundle install
    
-Ensure you are using the right ruby version.
-9. **Run the Rails Server**
+9. Ensure you are using the right ruby version.
+10. **Run the Rails Server**
    Start the Rails server by running:
       ```bash
       rails s
-10. **Open the Web App**
+11. **Open the Web App**
     Open your web browser and navigate to http://localhost:3000/ to view the website.
 
 ## Features
