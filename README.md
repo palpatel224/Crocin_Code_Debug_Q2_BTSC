@@ -1,4 +1,4 @@
-.# IE CODE DEBUG : Question 2
+# IE CODE DEBUG : Question 2
 # MAX POINTS : 100
 
 ## Table of Contents
