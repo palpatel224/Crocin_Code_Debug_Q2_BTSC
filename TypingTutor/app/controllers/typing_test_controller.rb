@@ -6,6 +6,6 @@ class TypingTestController < ApplicationController
   private
 
   def random_paragraph
-    paragraphs = Paragraph.all
+    Paragraph.order("RANDOM()").first
   end
 end
